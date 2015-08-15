@@ -13,7 +13,7 @@ namespace KO.Introducao.Controllers
 
         public DemosController()
         {
-            _demos = Factory.Demos;
+            _demos = Dados.Demos;
         }
 
         public ActionResult Index()
@@ -35,7 +35,7 @@ namespace KO.Introducao.Controllers
                     break;
             }
 
-            return View(view, null);
+            return View(view);
         }
     }
 }

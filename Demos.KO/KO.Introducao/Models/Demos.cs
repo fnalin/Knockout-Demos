@@ -10,7 +10,7 @@ namespace KO.Introducao.Models
     }
 
 
-    public class Factory
+    public class Dados
     {
 
         public static List<Demo> Demos

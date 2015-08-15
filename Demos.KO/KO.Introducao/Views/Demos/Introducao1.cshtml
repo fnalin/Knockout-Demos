@@ -1,7 +1,48 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Introducao1";
 }
 
-<h2>Introducao1</h2>
+<h2>Introducao</h2>
 
+<div class=" well well-sm">
+    Nome:
+    <input type="text" data-bind="value : nome, valueUpdate : 'afterkeydown'" />
+    <input type="checkbox" checked data-bind="checked : nomeVisible" />
+    <p>
+        Olá <span data-bind="text: nome, visible : nomeVisible"></span>
+        <br>
+        <strong data-bind="text:displayNome"></strong>
+    </p>
+    <button data-bind="click: changeNome">Alterar nome</button>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/knockout-3.3.0.js"></script>
+    <script>
+        $(function () {
+            var viewModel = {
+                nome: ko.observable("Fabiano Nalin"),
+                changeNome: function () {
+                    this.nome("Nalin - alterado!");
+                    VoltarFoco();
+                },
+                nomeVisible: ko.observable(true),
+            };
+
+            viewModel.displayNome = ko.computed(function () {
+                return this.nome() + " está " + (this.nomeVisible() == true ? "sendo exibido" : "está oculto")
+            }, viewModel);
+
+            ko.applyBindings(viewModel);
+
+            VoltarFoco();
+
+        })
+
+        function VoltarFoco() {
+            $("input[type='text']").focus();
+        }
+    </script>
+
+}
