@@ -1,22 +1,24 @@
 ﻿@{
-    ViewBag.Title = "Introducao1";
+    ViewBag.Title = "Observable";
 }
 
-<h2>Introducao</h2>
+<h2>Observable</h2>
 
 <div class="form-inline">
     <div class="form-group">
         <label for="inputName">Nome</label>
         <input type="text" class="form-control" id="inputName" data-bind="value : nome, valueUpdate : 'afterkeydown'">
-        <input type="checkbox" class="form-control" checked data-bind="checked : nomeVisible" />
+        <input type="checkbox" title="Exibir / Ocultar" class="form-control" checked data-bind="checked : nomeVisible" />
     </div>
 </div>
+<hr />
 <div class="form-group">
     <p>
         Olá <span data-bind="text: nome, visible : nomeVisible"></span>
     </p>
     <p data-bind="text:displayNome" class="alert alert-success"></p>
 </div>
+<hr />
 <div class="form-group">
     <button class="btn btn-default" data-bind="click: changeNome">Alterar nome</button>
 </div>
@@ -35,7 +37,7 @@
             };
 
             viewModel.displayNome = ko.computed(function () {
-                return this.nome() + " está " + (this.nomeVisible() == true ? "sendo exibido" : "está oculto")
+                return this.nome() + " está " + (this.nomeVisible() == true ? "sendo exibido" : "oculto")
             }, viewModel);
 
             ko.applyBindings(viewModel);

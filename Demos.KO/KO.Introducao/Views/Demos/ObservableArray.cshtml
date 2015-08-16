@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "ObservableArray";
+}
+
+<h2>Observable Array</h2>
+
+
+<div class="form-inline">
+    <div class="form-group">
+        <label for="nomeInput">Nome</label>
+        <input id="nomeInput" autofocus class="form-control" type="text" value=" " />
+        <button class="btn btn-sm btn-success" data-bind="click: addNome">Adicionar</button>
+        <button class="btn btn-sm btn-danger" data-bind="click: delNome">Remover o último</button>
+    </div>
+</div>
+<hr />
+<div class="well well-sm">
+    <h3>Lista de Nomes</h3>
+    <ul data-bind="template: {name:'listagem',foreach:list}"></ul>
+</div>
+@section scripts{
+    <script src="~/Scripts/knockout-3.3.0.js"></script>
+    <script id="listagem" type="text/html">
+        <li data-bind="text:name"></li>
+    </script>
+    <script>
+        $(function () {
+
+            var data = [{ name: "Fabiano" }, { name: "Raphael" }, { name: "Priscila" }];
+
+            var viewModel = {
+                list: ko.observableArray(data),
+                addNome: function () {
+                    var _nome = $("#nomeInput").val().trim();
+                    if (_nome.length > 0) {
+                        this.list.push({ name: _nome });
+                        $("#nomeInput").val("").focus();
+                    }
+                },
+                delNome: function () {
+                    this.list.pop();
+                },
+            };
+
+            ko.applyBindings(viewModel);
+
+
+        });
+    </script>
+}

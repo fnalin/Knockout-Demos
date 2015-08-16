@@ -29,9 +29,16 @@ namespace KO.Introducao.Controllers
             switch (id)
             {
                 case 1:
-                    view = "Introducao1";
+                    view = "Introducao";
+                    break;
+                case 2:
+                    view = "Observable";
+                    break;
+                case 3:
+                    view = "ObservableArray";
                     break;
                 default:
+
                     break;
             }
 

@@ -167,7 +167,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Demos\Index.cshtml" />
-    <Content Include="Views\Demos\Introducao1.cshtml" />
+    <Content Include="Views\Demos\Introducao.cshtml" />
+    <Content Include="Views\Demos\ObservableArray.cshtml" />
+    <Content Include="Views\Demos\Observable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

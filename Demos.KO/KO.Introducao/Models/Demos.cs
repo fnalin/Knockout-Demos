@@ -18,8 +18,9 @@ namespace KO.Introducao.Models
             get
             {
                 return new List<Demo> { 
-                    new Demo{ID=1,Nome="Introdução - 01",Descricao="Demo inicial introdutória"},
-                    new Demo{ID=2,Nome="Introdução - 02",Descricao="Usando Observable"},
+                    new Demo{ID=1,Nome="Introdução",Descricao="Demo inicial introdutória"},
+                    new Demo{ID=2,Nome="Observable",Descricao="Usando Observable"},
+                    new Demo{ID=3,Nome="ObservableArray",Descricao="Usando ObservableArray"},
                 };
             }
         }
