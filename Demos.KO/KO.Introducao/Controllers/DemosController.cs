@@ -9,7 +9,7 @@ namespace KO.Introducao.Controllers
 {
     public class DemosController : Controller
     {
-        private readonly List<Demo> _demos;
+        private readonly IList<Demo> _demos;
 
         public DemosController()
         {
