@@ -173,6 +173,7 @@
     <Content Include="Views\Demos\Observable.cshtml" />
     <Content Include="Views\Demos\Binding_visible.cshtml" />
     <Content Include="Views\Demos\Binding_text.cshtml" />
+    <Content Include="Views\Demos\Binding_html.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

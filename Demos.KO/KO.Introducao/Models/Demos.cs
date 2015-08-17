@@ -26,6 +26,7 @@ namespace KO.Introducao.Models
                     new Demo{ID=3,Nome="ObservableArray",View="ObservableArray",Descricao="Usando ObservableArray"},
                     new Demo{ID=4,Nome="Binding - visible",View="Binding_visible", Descricao="Binding - visible"},
                     new Demo{ID=5,Nome="Binding - text",View="Binding_text",Descricao="Binding - text"},
+                    new Demo{ID=6,Nome="Binding - html",View="Binding_html",Descricao="Binding - html"},
                 };
             }
         }
