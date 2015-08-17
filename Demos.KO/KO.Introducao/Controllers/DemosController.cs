@@ -37,8 +37,10 @@ namespace KO.Introducao.Controllers
                 case 3:
                     view = "ObservableArray";
                     break;
+                case 4:
+                    view = "Binding_visible";
+                    break;
                 default:
-
                     break;
             }
 

@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Binding - visible";
+}
+
+<h2>Binding - visible</h2>
+
+<div id="demo1">
+    <h3>Demo 1</h3>
+    <div>
+        Valor de shouldShowMessage:
+        <strong data-bind="text: shouldShowMessage"></strong>
+    </div>
+    <div data-bind="visible: shouldShowMessage">
+        Vc só verá essa mensagem se "shouldShowMessage" estiver true
+    </div>
+</div>
+
+<hr />
+
+<div id="demo2">
+    <h3>Demo 2</h3>
+    <label><input type="checkbox" checked  data-bind="checked : nomeVisible" /> Texto sendo exibido</label>
+    <p data-bind="visible: nomeVisible" class="alert alert-success">Texto exibido!</p>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/knockout-3.3.0.js"></script>
+    <script>
+        var viewModelDemo1 = {
+            shouldShowMessage: ko.observable(true) // Message initially visible
+        };
+        viewModelDemo1.shouldShowMessage(false); // ... now it's hidden
+        viewModelDemo1.shouldShowMessage(true); // ... now it's visible again
+
+
+        var viewModelDemo2 = {
+            nomeVisible: ko.observable(true),
+        };
+
+
+
+
+        ko.applyBindings(viewModelDemo1,document.getElementById("demo1"));
+        ko.applyBindings(viewModelDemo2,document.getElementById("demo2"));
+    </script>
+}
+

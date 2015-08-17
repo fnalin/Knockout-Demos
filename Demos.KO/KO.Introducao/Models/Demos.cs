@@ -13,7 +13,7 @@ namespace KO.Introducao.Models
     public class Dados
     {
 
-        public static List<Demo> Demos
+        public static IList<Demo> Demos
         {
             get
             {
@@ -21,6 +21,8 @@ namespace KO.Introducao.Models
                     new Demo{ID=1,Nome="Introdução",Descricao="Demo inicial introdutória"},
                     new Demo{ID=2,Nome="Observable",Descricao="Usando Observable"},
                     new Demo{ID=3,Nome="ObservableArray",Descricao="Usando ObservableArray"},
+                    new Demo{ID=4,Nome="Binding_visible",Descricao="Binding - visible"},
+                    //
                 };
             }
         }

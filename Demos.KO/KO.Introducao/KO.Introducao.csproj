@@ -152,6 +152,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Scripts\_temp.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -170,6 +171,7 @@
     <Content Include="Views\Demos\Introducao.cshtml" />
     <Content Include="Views\Demos\ObservableArray.cshtml" />
     <Content Include="Views\Demos\Observable.cshtml" />
+    <Content Include="Views\Demos\Binding_visible.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
