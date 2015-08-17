@@ -23,28 +23,12 @@ namespace KO.Introducao.Controllers
 
         public ActionResult Visualizar(int id)
         {
-            var view = string.Empty;
+            var view = _demos.FirstOrDefault(d=>d.ID==id);
 
+            if (view == null)
+                throw new Exception("Demo não encontrada");
 
-            switch (id)
-            {
-                case 1:
-                    view = "Introducao";
-                    break;
-                case 2:
-                    view = "Observable";
-                    break;
-                case 3:
-                    view = "ObservableArray";
-                    break;
-                case 4:
-                    view = "Binding_visible";
-                    break;
-                default:
-                    break;
-            }
-
-            return View(view);
+            return View(view.View);
         }
     }
 }

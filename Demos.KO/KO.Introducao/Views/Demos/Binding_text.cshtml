@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Binding - text";
+}
+
+<h2>Binding Text</h2>
+
+Items:
+<select data-bind="foreach: items">
+    <option data-bind="text: name"></option>
+</select>
+
+@section scripts{
+    <script src="~/Scripts/knockout-3.3.0.js"></script>
+    <script>
+        var viewModel = {
+            items: [{ name: "Fabiano" }, { name: "Raphael" }, { name: "Priscila" }],
+        };
+
+        ko.applyBindings(viewModel);
+    </script>
+}
