@@ -175,6 +175,7 @@
     <Content Include="Views\Demos\Binding_text.cshtml" />
     <Content Include="Views\Demos\Binding_html.cshtml" />
     <Content Include="Views\Demos\Binding_css.cshtml" />
+    <Content Include="Views\Demos\Binding_style.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
