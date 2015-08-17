@@ -1,7 +1,22 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Binding-attr";
 }
 
 <h2>Binding attr</h2>
 
+<a data-bind="attr: { href: url, title: details }">
+    Report 2
+</a>
+
+@section scripts{
+    <script src="~/Scripts/knockout-3.3.0.js"></script>
+
+    <script type="text/javascript">
+        var viewModel = {
+            url: ko.observable("year-end.html"),
+            details: ko.observable("Report including final year-end statistics")
+        };
+
+        ko.applyBindings(viewModel);
+    </script>
+}
