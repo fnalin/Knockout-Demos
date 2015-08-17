@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Binding-if";
+}
+
+<h2>Binding if</h2>
+
+<ul data-bind="foreach: estados">
+    <li>
+        Estado: <b data-bind="text: nome"> </b>
+        <div data-bind="if: capital">
+            Capital: <b data-bind="text: capital.nome"> </b>
+        </div>
+    </li>
+</ul>
+
+@section scripts{
+    <script src="~/Scripts/knockout-3.3.0.js"></script>
+    <script>
+        ko.applyBindings({
+            estados: [
+                { nome: 'São Paulo', capital: null },
+                { nome: 'Pernambuco', capital: { nome: 'Recife' } },
+                { nome: 'Amazonas', capital: { nome: 'Manaus' } },
+                { nome: 'Rio de Janeiro', capital: null },
+            ]
+        });
+    </script>
+}
