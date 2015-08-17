@@ -32,6 +32,7 @@ namespace KO.Introducao.Models
                     new Demo{ID=9,Nome="Binding - attr",View="Binding_attr",Descricao="Binding - attr"},
                     new Demo{ID=10,Nome="Binding - foreach",View="Binding_foreach",Descricao="Binding - foreach"},
                     new Demo{ID=11,Nome="Binding - if",View="Binding_if",Descricao="Binding - if"},
+                    new Demo{ID=12,Nome="Binding - with",View="Binding_with",Descricao="Binding - with"},
                 };
             }
         }
