@@ -29,7 +29,8 @@ namespace KO.Introducao.Models
                     new Demo{ID=6,Nome="Binding - html",View="Binding_html",Descricao="Binding - html"},
                     new Demo{ID=7,Nome="Binding - css",View="Binding_css",Descricao="Binding - css"},
                     new Demo{ID=8,Nome="Binding - style",View="Binding_style",Descricao="Binding - style"},
-                    new Demo{ID=9,Nome="Binding - attr",View="Binding_attr",Descricao="Binding - style"},
+                    new Demo{ID=9,Nome="Binding - attr",View="Binding_attr",Descricao="Binding - attr"},
+                    new Demo{ID=10,Nome="Binding - foreach",View="Binding_foreach",Descricao="Binding - foreach"},
                 };
             }
         }
